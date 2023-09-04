@@ -104,7 +104,7 @@
   </header>
   <main>
     <div class="container">
-      <section class="header-background">
+      <section class="header-background tab-header-background">
         <div class="container header-flex">
           <h1 class="main-header">Effective Solutions for Your Business</h1>
           <button class="front-button" type="button" data-modal-open>
@@ -145,7 +145,7 @@
               <use href="./images/icons.svg#icon-diagram-1"></use>
             </svg>
           </div>
-          <h3 class="mob-advantages">Diligence</h3>
+          <h3 class="mob-advantages top-marg">Diligence</h3>
           <p class="mob-discription">
             Research and confirm brands that present the strongest digital
             growth opportunities and minimize risk.
@@ -157,13 +157,30 @@
               <use href="./images/icons.svg#icon-astronaut-1"></use>
             </svg>
           </div>
-          <h3 class="mob-advantages">Technologies</h3>
+          <h3 class="mob-advantages top-marg">Technologies</h3>
           <p class="mob-discription">
             Design practice focused on digital experiences. We bring forth a
             deep passion for problem-solving.
           </p>
         </li>
       </ul>
+    </div>
+    <div class="container">
+      <section class="what-we-do">
+        <h2 class="header2">What are we doing</h2>
+        <ul class="work">
+          <li class="work-img">
+            <img src="images/picture1.jpg" alt="computer monitor with graphics" width="360" height="300" />
+          </li>
+          <li class="work-img">
+            <img src="images/picture2.jpg" alt="smartphone screen with some graphics" width="360" height="300" />
+          </li>
+          <li class="work-img">
+            <img src="images/picture3.jpg" alt="smartphone scrren with a laptop in background with graphics on"
+              width="360" height="300" />
+          </li>
+        </ul>
+      </section>
     </div>
     <section class="team-section">
       <h2 class="header2">Our Team</h2>
@@ -435,18 +452,74 @@
           </li>
         </ul>
       </div>
-      <form class="subscribe">
-        <label for="subscribes" class="footer-label"> <span> Subscribe</span> </label>
-        <input type="email" name="user-email" placeholder="E-mail" id="subscribes" class="filter-subscribe" required />
-        <button type="submit" class="subscribe-button">Subscribe
-          <svg class="a-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-Frame-3">
-            </use>
-          </svg>
-        </button>
-      </form>
+      <div class="newsletter">
+        <form class="subscribe">
+          <label for="subscribes" class="footer-label"> <span> Subscribe</span> </label>
+          <input type="email" name="user-email" placeholder="E-mail" id="subscribes" class="filter-subscribe"
+            required />
+          <button type="submit" class="subscribe-button">Subscribe
+            <svg class="a-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-Frame-3">
+              </use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close-btn" data-modal-close>
+        <svg class="centerx" width="24px" height="24px">
+          <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+        </svg>
+      </button>
+      <p class="order-form-name">
+        Leave your contacts and we will call you back
+      </p>
+      <form>
+        <label for="user-name" class="form-label">Name</label>
+        <div class="order-position">
+          <svg width="18px" height="18px" class="order-form-icon">
+            <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+          </svg>
+          <input id="user-name" name="user-name" class="order-input" pattern="^[A-Za-z\s\-']{1,50}$" required />
+        </div>
+        <label class="form-label">Phone</label>
+        <div class="order-position">
+          <svg width="18px" height="24px" class="order-form-icon">
+            <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+          </svg>
+          <input type="tel" name="phone_number" id="user-phone" class="order-input" pattern="[0-9+]+" maxlength="18"
+            required />
+        </div>
+        <label class="form-label">Email</label>
+        <div class="order-position">
+          <svg width="18px" height="24px" class="order-form-icon">
+            <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+          </svg>
+          <input id="user-email" name="user-email" class="order-input" required />
+        </div>
+        <label for="comment" class="form-label">Comment</label>
+        <div class="order-position">
+          <textarea id="comment" name="comment" placeholder="Text input" style="resize: none" spellcheck="true"
+            class="comment-textarea"></textarea>
+        </div>
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="user-agreement" name="user-agreement" class="modal-checkbox is-hidden" required />
+          <label for="user-agreement" class="checkbox-label">
+            <svg class="checkbox-icon" width="16px" height="16px">
+              <use href="./images/icons.svg#icon-Property-1click"></use>
+            </svg>
+
+            I accept the terms and conditions of the
+            <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+        <button class="modal-button-send" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
   <script src="./js/modal.js"></script>
   <script src="./js/mobile-menu.js"></script>
 </body>
