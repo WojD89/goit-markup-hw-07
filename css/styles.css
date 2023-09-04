@@ -51,6 +51,7 @@ body {
   margin: auto;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -61,16 +62,12 @@ body {
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1158px;
+    max-width: 1440px;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-.head-nav {
-  /* border-bottom: 1px solid var(--cornflower); */
-  background: var(--white);
-}
 .logo {
   display: flex;
   flex-direction: row;
@@ -87,17 +84,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-@media screen and (min-width: 768px) {
-  header {
-    padding: 16px 0;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  header {
-    padding: 24px 0;
-  }
-}
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 76px;
@@ -107,6 +94,8 @@ body {
 /* menu mobile */
 .mobile-menu {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   inset: 0;
   translate: -100% 0 0;
   transition: var(--transition);
@@ -229,25 +218,35 @@ body {
   transition: var(--transition);
   cursor: pointer;
 }
-.large-menu {
+.head-nav {
   display: none;
 }
 
 /* menu tablet/desktop */
-.tablet-nav {
+.head-nav {
+  border-top: none;
   border-bottom: 1px solid var(--cornflower);
   background: var(--white);
+}
+.logo {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  flex-shrink: 0;
+  width: 115px;
+  margin-right: 20px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .menu-nav {
-  display: inline-flex;
-  height: 48px;
-  align-items: flex-start;
+  display: flex;
   gap: 40px;
-  flex-shrink: 0;
 }
 .menu-item {
   margin: 0;
@@ -285,7 +284,6 @@ body {
 .contact-list {
   display: flex;
   justify-content: flex-end;
-  flex-direction: column;
   margin: 24px 0px;
   margin-left: auto;
 }
@@ -313,37 +311,49 @@ body {
   color: var(--ocean);
   transition: var(--transition);
 }
-
-@media (width > 768px) {
-  .mobile-header {
-    display: none;
-  }
-
-  .large-menu {
-    display: flex;
-  }
-}
 @media screen and (min-width: 768px) {
-  .menu-mobile {
+  .mob-head-nav {
     display: none;
   }
-
-  .tablet-menu {
+  .head-nav {
     display: flex;
-    width: 768px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding-top: 24px;
+  }
+  .contact-list {
+    flex-direction: column;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact-list {
-    flex-direction: row;
+  .mobile-header {
+    display: none;
+  }
+  .head-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 40px;
-    margin-left: auto;
+    align-items: flex-start;
+    margin: auto;
+    padding-bottom: 24px;
+    padding-left: 156px;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .menu-nav {
+    display: flex;
+    gap: 40px;
   }
 }
-
 /* hero */
 .header-background {
-  width: 428px;
+  max-width: 428px;
   height: 432px;
   flex-shrink: 0;
   display: flex;
@@ -392,7 +402,7 @@ body {
   align-content: center;
   color: var(--white);
   text-align: center;
-  width: 320px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 188px 0 48px 0;
   font-size: 36px;
@@ -412,20 +422,7 @@ body {
   max-width: 496px;
   margin-bottom: 36px;
 }
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (-o-min-device-pixel-ratio: 2/1),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .header-background {
-    background-image: linear-gradient(
-        90deg,
-        rgba(46, 47, 66, 0.7) 0%,
-        rgba(46, 47, 66, 0.7) 100%
-      ),
-      url("../images/index-page/people-office2x.jpg");
-  }
-}
+
 @media screen and (min-width: 768px) {
   .header-background {
     height: 433px;
@@ -436,6 +433,11 @@ body {
   .header-background {
     height: 600px;
     max-width: 1440px;
+  }
+  .main-header {
+    font-size: 56px;
+    font-weight: 700;
+    max-width: 496px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -456,11 +458,6 @@ body {
   gap: 72px;
   margin-top: 96px;
   margin-bottom: 96px;
-}
-
-.mob-ideas > li > h3 {
-  font-size: 32px;
-  font-weight: 600px;
 }
 
 .mob-advantages {
@@ -500,6 +497,7 @@ body {
   .mob-ideas {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 24px;
   }
 }
@@ -554,10 +552,13 @@ body {
 .work {
   display: flex;
   flex-wrap: nowrap;
-  max-width: 1128px;
+  max-width: 1440px;
   flex-shrink: 0;
   padding-bottom: 120px;
   padding-top: 72px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
 }
 .work-img {
   display: flex;
@@ -706,6 +707,7 @@ body {
   border: 2px solid #8e8f99;
   width: 190px;
   height: 88px;
+  padding: 16px 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -778,7 +780,6 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  gap: 72px;
 }
 .icon-footer {
   border-radius: 50%;
@@ -828,6 +829,11 @@ body {
   align-items: center;
   fill: var(--white);
 }
+@media screen and (max-width: 1200px) {
+  .footer-flex {
+    gap: 72px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-flex {
     flex-direction: row;
@@ -839,7 +845,14 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer-flex {
-    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 101.5px;
+    max-width: 1158px;
+    padding-left: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -860,7 +873,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .social-media {
-    margin-left: 120px;
+    margin-left: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -871,67 +884,6 @@ body {
 
 /*newsletter */
 
-.subscribe {
-  color: var(--white, #fff);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-  padding-bottom: 96px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-}
-
-.filter-subscribe {
-  width: 100%;
-  padding-left: 15px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid var(--white, #fff);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background-color: transparent;
-  color: var(--white, #fff);
-  font-size: 12px;
-  line-height: 1.5px;
-  letter-spacing: 0.48px;
-  outline: none;
-  opacity: 0.3;
-}
-
-.subscribe-button {
-  width: 165px;
-  height: 40px;
-  margin-top: 8px;
-  border-style: none;
-  border-radius: 4px;
-  display: inline-flex;
-  padding: 8px 24px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  background-color: var(--iris);
-  color: var(--white);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.64px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-input,
-textarea {
-  padding: 8px;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-textarea {
-  resize: none;
-}
 @media screen and (min-width: 768px) {
   .newsletter {
     margin-top: 0;
@@ -943,22 +895,80 @@ textarea {
     margin-left: 80px;
   }
 }
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 @media screen and (min-width: 768px) {
-  .subscribe {
+  .newsletter-form {
     flex-direction: row;
     gap: 24px;
     align-items: end;
   }
 }
+
+.newsletter-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 500;
+  color: var(--white);
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
-  .footer-label {
+  .newsletter-label {
     align-items: baseline;
   }
 }
+
+.newsletter input {
+  background-color: var(--navyblue);
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  opacity: 0.3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 100vw;
+  max-width: 398px;
+  height: 40px;
+  padding: 8px 16px;
+  color: var(--white);
+}
+
 @media screen and (min-width: 768px) {
-  .filter-subscribe {
+  .newsletter input {
     width: 264px;
   }
+}
+
+.newsletter-form button {
+  display: flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  width: 165px;
+  border-radius: 4px;
+  border: 1px solid var(--iris);
+  background: var(--iris, #4d5ae5);
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover,
+.newsletter-form button :focus {
+  background: var(--ocean);
+  border: 1px solid var(--ocean);
+}
+
+.subscribe-icon {
+  width: 24px;
+  height: 24px;
 }
 /* modal */
 

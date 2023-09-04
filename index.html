@@ -17,7 +17,7 @@
 <body>
   <header>
     <div class="container">
-      <div class="head-nav">
+      <div class="mob-head-nav">
         <div class="mobile-header">
           <a class="logo" href="index.html">
             <span class="iris">WEB</span><span class="navyblue">STUDIO</span></a>
@@ -76,8 +76,8 @@
           </ul>
         </div>
       </div>
-      <div class="large-menu">
-        <div class="tablet-nav">
+      <div class="container">
+        <div class="head-nav">
           <a class="logo" href="index.html"><span class="iris">WEB</span><span class="navyblue">STUDIO</span></a>
           <nav>
             <menu class="menu-nav">
@@ -104,7 +104,7 @@
   </header>
   <main>
     <div class="container">
-      <section class="header-background tab-header-background">
+      <section class="header-background ">
         <div class="container header-flex">
           <h1 class="main-header">Effective Solutions for Your Business</h1>
           <button class="front-button" type="button" data-modal-open>
@@ -453,14 +453,15 @@
         </ul>
       </div>
       <div class="newsletter">
-        <form class="subscribe">
-          <label for="subscribes" class="footer-label"> <span> Subscribe</span> </label>
-          <input type="email" name="user-email" placeholder="E-mail" id="subscribes" class="filter-subscribe"
-            required />
-          <button type="submit" class="subscribe-button">Subscribe
-            <svg class="a-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-Frame-3">
-              </use>
+        <form class="newsletter-form" name="newsletter-subscription" autocomplete="on" validate>
+          <label class="newsletter-label">
+            Subscribe
+            <input type="email" name="newsletter-email" id="newsletter-email" placeholder="E-mail" required />
+          </label>
+          <button type="submit">
+            Subscribe
+            <svg class="subscribe-icon">
+              <use href="./images/icons.svg#icon-Frame-3"></use>
             </svg>
           </button>
         </form>
