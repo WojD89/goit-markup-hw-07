@@ -108,6 +108,7 @@ body {
   flex-shrink: 0;
   padding-left: 16px;
   padding-right: 16px;
+  border-bottom: 1px solid var(--cornflower, #e7e9fc);
 }
 .mobile-menu.is-open {
   translate: none;
@@ -284,11 +285,6 @@ body {
 .contact-list {
   display: flex;
   justify-content: flex-end;
-  margin: 24px 0px;
-  margin-left: auto;
-}
-.contact-list li:not(:last-child) {
-  margin-right: 40px;
 }
 
 .contact {
@@ -320,17 +316,27 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    padding-top: 24px;
+
+    border-bottom: 1px solid var(--cornflower, #e7e9fc);
   }
   .contact-list {
     flex-direction: column;
-    margin: auto;
+    margin: 16px 0px;
+    margin-left: auto;
+    gap: 5px;
+  }
+  .contact {
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
   .mobile-header {
     display: none;
   }
+  .contact-list li:not(:last-child) {
+    margin-right: 40px;
+  }
+
   .head-nav {
     display: flex;
     flex-wrap: wrap;
@@ -338,13 +344,21 @@ body {
     gap: 40px;
     align-items: flex-start;
     margin: auto;
+    padding-top: 24px;
     padding-bottom: 24px;
+
     padding-left: 156px;
   }
   .contact-list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin: auto;
+    padding-left: 156px;
+  }
+  .contact {
+    font-size: 16px;
+    text-decoration: none;
   }
   .menu-nav {
     display: flex;
@@ -425,7 +439,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .header-background {
-    height: 433px;
+    height: 436px;
     max-width: 768px;
   }
 }
@@ -841,6 +855,10 @@ body {
     /* flex-wrap: wrap; */
     justify-content: left;
     padding-left: 108px;
+    gap: 24px;
+  }
+  .footer {
+    height: 456px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -854,6 +872,9 @@ body {
     max-width: 1158px;
     padding-left: 0;
   }
+  .footer {
+    height: 312px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-txt {
@@ -863,11 +884,6 @@ body {
 @media screen and (min-width: 768px) {
   .logo-footer {
     text-align: left;
-  }
-}
-@media screen and (min-width: 768px) {
-  .social-media {
-    margin-left: 24px;
   }
 }
 
@@ -886,13 +902,14 @@ body {
 
 @media screen and (min-width: 768px) {
   .newsletter {
-    margin-top: 0;
+    margin-top: 48px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .newsletter {
     margin-left: 80px;
+    margin-top: 0;
   }
 }
 
