@@ -448,6 +448,19 @@ body {
     height: 600px;
     max-width: 1440px;
   }
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .header-background {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/people-officex2.jpg");
+      background-size: cover;
+    }
+  }
   .main-header {
     font-size: 56px;
     font-weight: 700;
@@ -492,6 +505,7 @@ body {
 .icon-background-ad {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .mob-ideas {
     display: grid;
@@ -513,6 +527,45 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 24px;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .work-img1 {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/picture1x2.jpg");
+      background-size: cover;
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .work-img2 {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/picture2x2.jpg");
+      background-size: cover;
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .work-img3 {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/picture3x2.jpg");
+      background-size: cover;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -574,7 +627,7 @@ body {
   justify-content: center;
   gap: 24px;
 }
-.work-img {
+.work-img1 .work-img2 .work-img3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -614,6 +667,9 @@ body {
   padding-bottom: 120px;
   padding-top: 120px;
   background: var(--cloud);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .team-cards {
   display: flex;
@@ -680,9 +736,10 @@ body {
   .team-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 24px 64px;
-    gap: 24px;
+    grid-gap: 64px 24px;
+
     justify-items: center;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
